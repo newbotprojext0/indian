@@ -22,11 +22,11 @@ from haruka.modules.connection import connected
 
 PM_START = """Hello {}, my name is {}!
 
-I'm here to help you manage your groups!. Need Any Help Join Our Support Group ( @CuratorSCrew) 
+I'm here to help you manage your groups!. Need Any Help Join Our Support Group ( @BrothersGang) 
 
-I'm a group manager bot maintained by this [sexy boi](https://t.me/Divya_xd) I'm built in python3, using the python-telegram-bot library.
+I'm a group manager bot maintained by this [sexy boi](https://t.me/ItsAvira) I'm built in python3, using the python-telegram-bot library.
 
-Want to add me to your group? [Click here!](t.me/shizuka_robot?startgroup=true)
+Want to add me to your group? [Click here!](t.me/Lucy_Robot?startgroup=true)
 
 Click (Help) button to find out more about how to use me to my full potential."""
 
