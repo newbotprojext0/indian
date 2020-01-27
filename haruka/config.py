@@ -11,14 +11,14 @@ class Config(object):
 
     # REQUIRED
     API_KEY = ""
-    OWNER_ID = "686021814"  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = "TheDarkW3b"
+    OWNER_ID = "919262859"  # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_USERNAME = "Okay_retard"
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = ''  # needed for any database modules
     MESSAGE_DUMP = # needed to make sure 'save from' messages persist
     LOAD = []
-    NO_LOAD = ['translation', 'sed']
+    NO_LOAD = ['sed']
     WEBHOOK = ANYTHING
     URL = "https://menherachanrobot.herokuapp.com/"
 
