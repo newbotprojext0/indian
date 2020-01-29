@@ -354,7 +354,7 @@ def button(bot, update):
     query_type = data[0]
     original_user_id = int(data[1])
 
-    user_and_admin_list = [original_user_id, OWNER_ID] + SUDO_USERS + DEV_USERS
+    user_and_admin_list = [original_user_id, OWNER_ID] + SUDO_USERS + SUPPORT_USERS
     
     if query_type == "anime_close":
         if query.from_user.id in user_and_admin_list:
