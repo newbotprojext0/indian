@@ -8,10 +8,10 @@ from telegram.ext import Updater, CommandHandler
 from telegram.error import TimedOut, NetworkError
 from telegram import ParseMode
 
-from tg_bot.modules.disable import DisableAbleCommandHandler
+from haruka.modules.disable import DisableAbleCommandHandler
 from telegram.ext.dispatcher import run_async
-from tg_bot.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin, dev_plus
-from tg_bot import dispatcher, LOGGER
+from haruka.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin
+from haruka import dispatcher, LOGGER
 
 from requests import get
 
@@ -63,12 +63,12 @@ def send(msg, bot, update):
     LOGGER.info("OUT: '{}'".format(msg))
     bot.send_message(chat_id=update.effective_chat.id, text="`{}`".format(msg), parse_mode=ParseMode.MARKDOWN)
 
-@dev_plus
+
 @run_async
 def evaluate(bot, update):
     send(do(eval, bot, update), bot, update)
 
-@dev_plus
+
 @run_async
 def execute(bot, update):
     send(do(exec, bot, update), bot, update)
@@ -124,7 +124,7 @@ def do(func, bot, update):
                 result = 'Output is too long'
             return result
 
-@dev_plus
+
 @run_async
 def clear(bot, update):
     log_input(update)
