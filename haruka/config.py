@@ -37,7 +37,7 @@ class Config(object):
     STRICT_GMUTE = True
     ALLOW_EXCL = True  # Allow ! commands as well as /
     API_OPENWEATHER = '' # OpenWeather API
-    CASH_API_KEY = None
+    
     # MEMES
     DEEPFRY_TOKEN = None
 
