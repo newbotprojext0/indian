@@ -4,10 +4,10 @@ from telegram.error import BadRequest
 from telegram.ext import MessageHandler, Filters, CommandHandler
 from telegram.ext.dispatcher import run_async
 from typing import List
-from tg_bot.modules.helper_funcs.filters import CustomFilters
+from haruka.modules.helper_funcs.filters import CustomFilters
 
 import telegram
-from tg_bot import dispatcher, DEV_USERS
+from haruka import dispatcher, DEV_USERS
 
 @run_async
 def leave(bot: Bot, update: Update, args: List[str]):
