@@ -4,8 +4,8 @@ from telegram.ext import CallbackQueryHandler, run_async
 from telegram import Message, Update, Bot, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram import ParseMode
 
-from tg_bot import dispatcher, OWNER_ID, SUDO_USERS, DEV_USERS
-from tg_bot.modules.disable import DisableAbleCommandHandler
+from haruka import dispatcher, OWNER_ID, SUDO_USERS, DEV_USERS
+from haruka.modules.disable import DisableAbleCommandHandler
 
 info_btn = "More Information"
 kaizoku_btn = "Kaizoku ☠️"
