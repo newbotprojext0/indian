@@ -22,8 +22,8 @@ from haruka.modules.disable import DisableAbleCommandHandler
 langi = "en"
 
 #kanged from Blank-x ;---;
-@async_def
-async def imdb(e):
+@run_async
+def imdb(e):
  try:
     movie_name = e.pattern_match.group(1)
     remove_space = movie_name.split(' ')
