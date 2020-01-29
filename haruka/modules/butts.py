@@ -1,4 +1,4 @@
-from telegram import ChatAction
+ from telegram import ChatAction
 import html
 import urllib.request
 import re
@@ -26,5 +26,5 @@ __help__ = """
  - /butts: Sends Random Butts pic.
 """
 __mod_name__ = "NSFW"
-BUTTS_HANDLER = DisableAbleCommandHandler("butts", butts)
+BUTTS_HANDLER = DisableAbleCommandHandler("butts", butts, admin_ok=True)
 dispatcher.add_handler(BUTTS_HANDLER)
