@@ -4,7 +4,7 @@ from telegram.ext import CallbackQueryHandler, run_async
 from telegram import Message, Update, Bot, InlineKeyboardMarkup, InlineKeyboardButton
 from telegram import ParseMode
 
-from haruka import dispatcher, OWNER_ID, SUDO_USERS, DEV_USERS
+from haruka import dispatcher, OWNER_ID, SUDO_USERS, SUPORT_USERS
 from haruka.modules.disable import DisableAbleCommandHandler
 
 info_btn = "More Information"
