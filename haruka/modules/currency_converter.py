@@ -3,7 +3,7 @@ import requests
 from telegram import Update, Bot
 from telegram.ext import CommandHandler
 
-from tg_bot import dispatcher, CASH_API_KEY
+from haruka import dispatcher, CASH_API_KEY
 
 def convert(bot: Bot, update: Update):
     args = update.effective_message.text.split(" ", 3)
