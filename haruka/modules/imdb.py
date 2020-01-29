@@ -80,7 +80,7 @@ def imdb(e):
     		mov_rating = r.strong['title']
     else:
     	mov_rating = 'Not available'
-    update.effective_message.reply_text('<a href='+poster+'>&#8203;</a>'
+    update.effective_message.reply_photo('<a href='+poster+'>&#8203;</a>'
     			'<b>Title : </b><code>'+mov_title+
     			'</code>\n<code>'+mov_details+
     			'</code>\n<b>Rating : </b><code>'+mov_rating+
