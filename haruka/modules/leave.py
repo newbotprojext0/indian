@@ -7,7 +7,7 @@ from typing import List
 from haruka.modules.helper_funcs.filters import CustomFilters
 
 import telegram
-from haruka import dispatcher, DEV_USERS
+from haruka import dispatcher, SUDO_USERS
 
 @run_async
 def leave(bot: Bot, update: Update, args: List[str]):
@@ -26,5 +26,5 @@ __help__ = ""
 
 __mod_name__ = "Leave"
 
-LEAVE_HANDLER = CommandHandler("leave", leave, pass_args = True, filters=Filters.user(DEV_USERS))
+LEAVE_HANDLER = CommandHandler("leave", leave, pass_args = True, filters=Filters.user(SUDO_USERS))
 dispatcher.add_handler(LEAVE_HANDLER)
