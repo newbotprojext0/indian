@@ -2,8 +2,8 @@ from telegram import Message, Chat, Update, Bot, User, ParseMode
 from telegram.ext import CommandHandler, Filters
 from telegram.ext.dispatcher import run_async
 import requests, datetime, json, urllib
-from tg_bot.modules.disable import DisableAbleCommandHandler
-from tg_bot import dispatcher
+from haruka.modules.disable import DisableAbleCommandHandler
+from haruka import dispatcher
 
 @run_async
 def devices(bot: Bot, update: Update):
