@@ -1,11 +1,5 @@
 
-# For UniBorg
-# Copyright (c) JeepBot | 2019 
-# (c) JeepBot is not occur to all modules in here
-"""
-Imdb Module
-.imdb
-"""
+
 
 import bs4
 import requests
@@ -22,7 +16,7 @@ from haruka.modules.disable import DisableAbleCommandHandler
 langi = "en"
 
 #kanged from Blank-x ;---;
-@run_async
+
 def imdb(e):
  try:
     movie_name = e.pattern_match.group(1)
