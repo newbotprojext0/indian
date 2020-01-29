@@ -14,13 +14,15 @@ import os
 import re
 import subprocess
 import time
-from datetime import datetime
-from uniborg.util import admin_cmd
+import datetime
+
+from haruka import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS
+from haruka.modules.disable import DisableAbleCommandHandler
 
 langi = "en"
 
 #kanged from Blank-x ;---;
-@borg.on(admin_cmd("imdb (.*)", outgoing=True)) 
+@async_def
 async def imdb(e):
  try:
     movie_name = e.pattern_match.group(1)
@@ -99,3 +101,7 @@ async def imdb(e):
     			)
  except IndexError:
      await e.edit("Plox enter **Valid movie name** kthx")
+   
+ IMDB_HANDLER = DisableAbleCommandHandler("imdb", imdb)    
+ 
+ dispatcher.add_handler(IMDB_HANDLER)
