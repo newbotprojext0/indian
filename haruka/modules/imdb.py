@@ -100,7 +100,7 @@ def imdb(e):
     			link_preview = True , parse_mode = 'HTML'
     			)
  except IndexError:
-     await e.edit("Plox enter **Valid movie name** kthx")
+     update.effective_message.reply_text("Plox enter **Valid movie name** kthx")
    
  IMDB_HANDLER = DisableAbleCommandHandler("imdb", imdb)    
  
