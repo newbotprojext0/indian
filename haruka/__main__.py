@@ -139,7 +139,7 @@ def send_start(bot, update):
 Click Help button to find out more about how to use me to my full potential.\n\n"
 
 
-    text += "Want to add me to your group? [Click here!](t.me/Katherine_Langford_Bot?startgroup=true)!\n\
+    
     text += "Want to add me to your group? [Click here!](t.me/Katherine_Langford_Bot?startgroup=true)!\n\
     Maintained by [this awesome person](https://t.me/Okay_retard).\n\n"
 
