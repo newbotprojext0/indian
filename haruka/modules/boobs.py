@@ -21,5 +21,5 @@ def boobs(bot: Bot, update: Update):
     final = "http://media.oboobs.ru/{}".format(nsfw)
     update.message.reply_photo(final)
 		
-BOOBS_HANDLER = DisableAbleCommandHandler("boobs", boobs)
+BOOBS_HANDLER = DisableAbleCommandHandler("boobs", boobs, admin_ok=True)
 dispatcher.add_handler(BOOBS_HANDLER)
