@@ -109,7 +109,7 @@ def mafiatext(bot: Bot, update: Update):
     os.remove('mafiaed{}.jpg'.format(randint))
     
 @run_async
-def nikaltext(bot: Bot, update: Update):
+def mafiatext(bot: Bot, update: Update):
     message = update.effective_message
     if message.reply_to_message:
         data = message.reply_to_message.text
@@ -359,7 +359,7 @@ KIM_HANDLER = DisableAbleCommandHandler("kim", kimtext, admin_ok=True)
 MAFIA_HANDLER = DisableAbleCommandHandler("mafia", mafiatext, admin_ok=True)
 PIDOR_HANDLER = DisableAbleCommandHandler("pidor", pidortext, admin_ok=True)
 HITLER_HANDLER = DisableAbleCommandHandler("hitler", hitlertext, admin_ok=True)
-NIKAL_HANDLER = DisableAbleCommandHandler("nikal", nikaltext, admin_ok=True)
+NIKAL_HANDLER = DisableAbleCommandHandler("nikal", mafiatext, admin_ok=True)
 ZALGO_HANDLER = DisableAbleCommandHandler("zalgofy", zalgotext)
 FORBES_HANDLER = DisableAbleCommandHandler("forbes", forbesify, admin_ok=True)
 DEEPFRY_HANDLER = DisableAbleCommandHandler("deepfry", deepfryer, admin_ok=True)
