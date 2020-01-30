@@ -126,9 +126,9 @@ def nikaltext(bot: Bot, update: Update):
     randint = random.randint(1, 699)
     magick = """convert nikal.jpg -font Impact -pointsize 50 -size 1280x720 -stroke white -strokewidth 1 -fill black -background none -gravity north caption:"{}" -flatten mafiaed{}.jpg""".format(reply_text, randint)
     os.system(magick)
-    with open('nikal{}.jpg'.format(randint), 'rb') as mockedphoto:
+    with open('mafiaed{}.jpg'.format(randint), 'rb') as mockedphoto:
         message.reply_to_message.reply_photo(photo=mockedphoto, reply=message.reply_to_message)
-    os.remove('nikal{}.jpg'.format(randint))   
+    os.remove('mafiaed{}.jpg'.format(randint))   
 
 
 @run_async
