@@ -109,7 +109,7 @@ def mafiatext(bot: Bot, update: Update):
     os.remove('mafiaed{}.jpg'.format(randint))
     
 @run_async
-def mafiatext(bot: Bot, update: Update):
+def nikaltext(bot: Bot, update: Update):
     message = update.effective_message
     if message.reply_to_message:
         data = message.reply_to_message.text
@@ -124,11 +124,11 @@ def mafiatext(bot: Bot, update: Update):
     reply_text = spongemock.mock(data)
 
     randint = random.randint(1, 699)
-    magick = """convert nikal.jpg -font Impact -pointsize 50 -size 1280x720 -stroke white -strokewidth 1 -fill black -background none -gravity north caption:"{}" -flatten mafiaed{}.jpg""".format(reply_text, randint)
+    magick = """convert nikal.jpg -font Impact -pointsize 50 -size 1280x720 -stroke white -strokewidth 1 -fill black -background none -gravity north caption:"{}" -flatten nikaled{}.jpg""".format(reply_text, randint)
     os.system(magick)
-    with open('mafiaed{}.jpg'.format(randint), 'rb') as mockedphoto:
+    with open('nikaled{}.jpg'.format(randint), 'rb') as mockedphoto:
         message.reply_to_message.reply_photo(photo=mockedphoto, reply=message.reply_to_message)
-    os.remove('mafiaed{}.jpg'.format(randint))   
+    os.remove('nikaled{}.jpg'.format(randint))   
 
 
 @run_async
@@ -359,7 +359,7 @@ KIM_HANDLER = DisableAbleCommandHandler("kim", kimtext, admin_ok=True)
 MAFIA_HANDLER = DisableAbleCommandHandler("mafia", mafiatext, admin_ok=True)
 PIDOR_HANDLER = DisableAbleCommandHandler("pidor", pidortext, admin_ok=True)
 HITLER_HANDLER = DisableAbleCommandHandler("hitler", hitlertext, admin_ok=True)
-NIKAL_HANDLER = DisableAbleCommandHandler("nikal", mafiatext, admin_ok=True)
+NIKAL_HANDLER = DisableAbleCommandHandler("nikal", nikaltext, admin_ok=True)
 ZALGO_HANDLER = DisableAbleCommandHandler("zalgofy", zalgotext)
 FORBES_HANDLER = DisableAbleCommandHandler("forbes", forbesify, admin_ok=True)
 DEEPFRY_HANDLER = DisableAbleCommandHandler("deepfry", deepfryer, admin_ok=True)
