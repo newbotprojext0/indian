@@ -18,6 +18,7 @@ langi = "en"
 #kanged from Blank-x ;---;
 
 def imdb(e):
+ update.effective_message.reply_text("Format : /anime <animename>")
  try:
     movie_name = e.pattern_match.group(1)
     remove_space = movie_name.split(' ')
