@@ -124,7 +124,8 @@ def nikaltext(bot: Bot, update: Update):
     reply_text = spongemock.mock(data)
 
     randint = random.randint(1, 699)
-    magick = """convert nikal.jpg -font Impact -pointsize 50 -size 1280x720 -stroke white -strokewidth 1 -fill black -background none -gravity north caption:"{}" -flatten nikaled{}.jpg""".format(reply_text, randint)
+    magick = """convert nikal.jpg -font Impact -pointsize 50 -size 615x409 -stroke black -strokewidth 1 -fill white -background none -gravity north caption:"{}" -flatten nikaled{}.jpg""".format(reply_text, randint)
+  
     os.system(magick)
     with open('nikaled{}.jpg'.format(randint), 'rb') as mockedphoto:
         message.reply_to_message.reply_photo(photo=mockedphoto, reply=message.reply_to_message)
