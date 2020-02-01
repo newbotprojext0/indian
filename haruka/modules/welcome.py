@@ -101,7 +101,9 @@ def new_member(bot: Bot, update: Update):
                     "I have been added to {} with ID: <pre>{}</pre>".format(chat.title, chat.id),
                     parse_mode=ParseMode.HTML
                 )
-                bot.send_message(chat.id, "Thanks To Add,Give Some Commands Now 😃")
+                bot.send_message(chat.id, "Thanks For Adding Me Here. I hereby, Take a Oath To Protect This Wonderful Group From Scammers and Obviously The Spammers. 😊/n/n
+
+Just Put Flood And I Will Make Sure That No One Spam The Group./n/n")
 
             else:
                 # If welcome message is media, send with appropriate function
