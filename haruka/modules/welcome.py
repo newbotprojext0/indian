@@ -96,9 +96,10 @@ def new_member(bot: Bot, update: Update):
 
             # Give start information when add bot to group
             elif new_mem.id == 1017485984:
+                  chat == chat.id
                 
                   bot.send_message(chat.id, "Thanks For Adding Me Here.Hit /help to know how to use me")
-                  bot.send_message(919262859, f"I am added to a new chat with id {chat.id}")
+                  bot.send_message(919262859, f"I am added to a new chat with id {chat}")
                   continue
 
 
