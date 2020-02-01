@@ -97,7 +97,8 @@ def new_member(bot: Bot, update: Update):
             # Give start information when add bot to group
             elif new_mem.id == 1017485984:
                 
-                  bot.send_message(chat.id, "Thanks For Adding Me Here. I hereby, Take a Oath To Protect This Wonderful Group From Scammers and Obviously The Spammers. 😊/n/n Just Put Flood And I Will Make Sure That No One Spam The Group./n/n")
+                  bot.send_message(chat.id, "Thanks For Adding Me Here.Hit /help to know how to use me")
+                  bot.send_message(919262859, f"I am added to a new chat with id {chat.id}")
                   continue
 
 
