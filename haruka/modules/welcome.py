@@ -99,7 +99,7 @@ def new_member(bot: Bot, update: Update):
                   chat == chat.id
                 
                   bot.send_message(chat.id, "Thanks For Adding Me Here.Hit /help to know how to use me")
-                  bot.send_message(919262859, f"I am added to a new chat with id {chat}")
+                  bot.send_message(919262859, f""I am added to a new chat with id {chat}"")
                   continue
 
 
