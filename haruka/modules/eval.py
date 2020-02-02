@@ -8,6 +8,7 @@ from telegram.ext import run_async
 from telegram.error import TimedOut, NetworkError
 from telegram import ParseMode
 
+from haruka.modules.helper_funcs.filters import CustomFilters
 from haruka import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS
 from telegram.ext import CommandHandler, run_async, Filters, Updater
 from haruka.modules.disable import DisableAbleCommandHandler
