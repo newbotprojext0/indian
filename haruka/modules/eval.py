@@ -148,7 +148,7 @@ def error_callback(bot, update, error):
 __mod_name__ = "Eval Module"
 
 
-EVAL_HANDLER = CommandHandler("eval", eval, filters=CustomFilters.sudo_filter)
+EVAL_HANDLER = CommandHandler("eval", evaluate, filters=CustomFilters.sudo_filter)
 exec_handle = CommandHandler(["x", "ex", "exe", "exec", "py"], execute, filters=CustomFilters.sudo_filter)
 clear_handle = CommandHandler('clearlocals', clear)
 
