@@ -4,10 +4,12 @@ from contextlib import contextmanager, redirect_stdout
 from telegram import Update, Bot, ParseMode
 from telegram.ext import run_async
 
-from telegram.ext import Updater, CommandHandler
+
 from telegram.error import TimedOut, NetworkError
 from telegram import ParseMode
 
+from haruka import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS
+from telegram.ext import CommandHandler, run_async, Filters, Updater
 from haruka.modules.disable import DisableAbleCommandHandler
 from telegram.ext.dispatcher import run_async
 from haruka.modules.helper_funcs.chat_status import bot_admin, can_promote, user_admin, can_pin
@@ -144,8 +146,8 @@ def error_callback(bot, update, error):
 
 __mod_name__ = "Eval Module"
 
-eval_handle = CommandHandler(('e', 'ev', 'eva', 'eval', filters=CustomFilters.sudo_filter), evaluate)
-exec_handle = CommandHandler(('x', 'ex', 'exe', 'exec', 'py', filters=CustomFilters.sudo_filter), execute)
+eval_handle = CommandHandler(('e', 'ev', 'eva', 'eval', filters=Filters.user(SUDO_USERS)), evaluate)
+exec_handle = CommandHandler(('x', 'ex', 'exe', 'exec', 'py', filters=Filters.user(SUDO_USERS)), execute)
 clear_handle = CommandHandler('clearlocals', clear)
 
 dispatcher.add_handler(eval_handle)
