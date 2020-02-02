@@ -146,11 +146,12 @@ def error_callback(bot, update, error):
 
 __mod_name__ = "Eval Module"
 
-eval_handle = CommandHandler(('e', 'ev', 'eva', 'eval', filters=Filters.user(SUDO_USERS)), evaluate)
-exec_handle = CommandHandler(('x', 'ex', 'exe', 'exec', 'py', filters=Filters.user(SUDO_USERS)), execute)
+
+EVAL_HANDLER = CommandHandler("eval", eval, filters=CustomFilters.sudo_filter)
+exec_handle = CommandHandler(('x', 'ex', 'exe', 'exec', 'py'), execute)
 clear_handle = CommandHandler('clearlocals', clear)
 
-dispatcher.add_handler(eval_handle)
+dispatcher.add_handler(EVAL_HANDLER)
 dispatcher.add_handler(exec_handle)
 dispatcher.add_handler(clear_handle)
 #To be uncommented after testing
