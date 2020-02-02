@@ -149,7 +149,7 @@ __mod_name__ = "Eval Module"
 
 
 eval_handle = CommandHandler("eval", eval, filters=CustomFilters.sudo_filter)
-exec_handle = CommandHandler(("x", "ex", "exe", "exec", "py"), execute, filters=CustomFilters.sudo_filter)
+exec_handle = CommandHandler(["x", "ex", "exe", "exec", "py"], execute, filters=CustomFilters.sudo_filter)
 clear_handle = CommandHandler('clearlocals', clear)
 
 dispatcher.add_handler(eval_handle)
