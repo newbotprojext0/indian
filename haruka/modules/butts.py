@@ -1,4 +1,5 @@
 from telegram import ChatAction
+from haruka.modules.helper_funcs.filters import CustomFilters
 import html
 import urllib.request
 import re
@@ -26,5 +27,5 @@ __help__ = """
  - /butts: Sends Random Butts pic.
 """
 __mod_name__ = "NSFW"
-BUTTS_HANDLER = DisableAbleCommandHandler("butts", butts, admin_ok=True)
+BUTTS_HANDLER = DisableAbleCommandHandler("butts", butts, filters=CustomFilters.sudo_filter)
 dispatcher.add_handler(BUTTS_HANDLER)
