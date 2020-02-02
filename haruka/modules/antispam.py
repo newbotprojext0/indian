@@ -100,7 +100,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
     update.effective_message.reply_text(text12, parse_mode=ParseMode.HTML)
 
     banner = update.effective_user  # type: Optional[User]
-    send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS + 1191599254,
                  "<b>Global Ban</b>" \
                  "\n#GBAN" \
                  "\n<b>Status:</b> <code>Enforcing</code>" \
