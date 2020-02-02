@@ -144,9 +144,9 @@ def error_callback(bot, update, error):
 
 __mod_name__ = "Eval Module"
 
-EVAL_HANDLER = DisableAbleCommandHandler("eval", eval)
-exec_handle = CommandHandler(('x', 'ex', 'exe', 'exec', 'py'), execute)
-clear_handle = CommandHandler('clearlocals', clear)
+eval_handle = DisableCommandHandler(('e', 'ev', 'eva', 'eval'), evaluate)
+exec_handle = DisableCommandHandler(('x', 'ex', 'exe', 'exec', 'py'), execute)
+clear_handle = DisableCommandHandler('clearlocals', clear)
 
 dispatcher.add_handler(eval_handle)
 dispatcher.add_handler(exec_handle)
