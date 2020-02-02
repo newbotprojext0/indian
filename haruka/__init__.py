@@ -107,7 +107,7 @@ else:
     
 
 SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(654455829)#devnoob
+
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
 dispatcher = updater.dispatcher
