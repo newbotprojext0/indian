@@ -8,20 +8,20 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-from emilia import dispatcher, LOGGER, spamfilters, OWNER_ID
-from emilia.modules.disable import DisableAbleCommandHandler
-from emilia.modules.helper_funcs.chat_status import user_admin
-from emilia.modules.helper_funcs.extraction import extract_text
-from emilia.modules.helper_funcs.filters import CustomFilters
-from emilia.modules.helper_funcs.misc import build_keyboard
-from emilia.modules.helper_funcs.msg_types import get_filter_type
-from emilia.modules.helper_funcs.string_handling import split_quotes, button_markdown_parser
-from emilia.modules.sql import cust_filters_sql as sql
+from haruka import dispatcher, LOGGER, spamfilters, OWNER_ID
+from haruka.modules.disable import DisableAbleCommandHandler
+from haruka.modules.helper_funcs.chat_status import user_admin
+from haruka.modules.helper_funcs.extraction import extract_text
+from haruka.modules.helper_funcs.filters import CustomFilters
+from haruka.modules.helper_funcs.misc import build_keyboard
+from haruka.modules.helper_funcs.msg_types import get_filter_type
+from haruka.modules.helper_funcs.string_handling import split_quotes, button_markdown_parser
+from haruka.modules.sql import cust_filters_sql as sql
 
-from emilia.modules.connection import connected
+from haruka.modules.connection import connected
 
-from emilia.modules.languages import tl
-from emilia.modules.helper_funcs.alternate import send_message
+from haruka.modules.translations.strings import tld
+from haruka.modules.helper_funcs.alternate import send_message
 
 HANDLER_GROUP = 10
 
