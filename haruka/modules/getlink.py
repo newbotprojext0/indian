@@ -2,8 +2,8 @@ from typing import List
 
 from telegram import Update, Bot, Chat, Message, User
 from telegram.error import BadRequest
-from haruka.ext import CommandHandler, Filters
-from haruka.ext.dispatcher import run_async
+from telegram.ext import CommandHandler, Filters
+from telegram.ext.dispatcher import run_async
 from haruka.modules.helper_funcs.chat_status import bot_admin
 from haruka.modules.helper_funcs.filters import CustomFilters
 
