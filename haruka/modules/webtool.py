@@ -142,4 +142,4 @@ SPEED_HANDLER = CommandHandler("speedtest", speedtst, filters=CustomFilters.sudo
 dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(RTT_HANDLER)
 dispatcher.add_handler(SPEED_HANDLER)
-dispatcher.add_handler(PING_HANDLER
+dispatcher.add_handler(PING_HANDLER)
