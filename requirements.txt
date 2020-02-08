@@ -27,5 +27,5 @@ googletrans
 alphabet_detector
 jikanpy
 psutil
-speedtest-cli==0.2.6
-pyspeedtest
+speedtest-cli>=2.0.2
+
