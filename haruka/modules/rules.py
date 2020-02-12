@@ -10,6 +10,7 @@ import haruka.modules.sql.rules_sql as sql
 from haruka import dispatcher
 from haruka.modules.helper_funcs.chat_status import user_admin
 from haruka.modules.helper_funcs.string_handling import markdown_parser
+from haruka.modules.disable import DisableAbleCommandHandler
 
 
 @run_async
