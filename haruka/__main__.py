@@ -10,18 +10,18 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 
-from tg_bot import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, \
+from haruka import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, \
     ALLOW_EXCL
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
-from tg_bot.modules import ALL_MODULES
-from tg_bot.modules.helper_funcs.chat_status import is_user_admin
-from tg_bot.modules.helper_funcs.misc import paginate_modules
+from haruka.modules import ALL_MODULES
+from haruka.modules.helper_funcs.chat_status import is_user_admin
+from haruka.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """Hello {}, my name is {}!
 I'm here to help you manage your groups!.I will Try My best to manage your groups.
 I'm a group manager bot maintained by this [awesome person](https://t.me/Okay_retard) .
-Want to add me to your group? [Click here!](t.me/Katherine_Langford_Bot?startgroup=true)
+Want to add me to your group? [Click here!](t.me/Kanna_Chan_Bot?startgroup=true)
 Thanks For Using Me 
  """
 
