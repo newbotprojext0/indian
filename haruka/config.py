@@ -2,9 +2,9 @@ class Config(object):
     LOGGER = True
 
     # REQUIRED
-    API_KEY = "YOUR KEY HERE"
-    OWNER_ID = "YOUR ID HERE"  # If you dont know, run the bot and do /id in your private chat with it
-    OWNER_USERNAME = "YOUR USERNAME HERE"
+    API_KEY = "1017485984:AAEXmCOgmQVtwJTqSySt25M-URyhY905HPE"
+    OWNER_ID = "919262859" # If you dont know, run the bot and do /id in your private chat with it
+    OWNER_USERNAME = "Okay_retard"
 
     # RECOMMENDED
     SQLALCHEMY_DATABASE_URI = 'sqldbtype://username:pw@hostname:port/db_name'  # needed for any database modules
@@ -24,7 +24,7 @@ class Config(object):
     DEL_CMDS = False  # Whether or not you should delete "blue text must click" commands
     STRICT_ANTISPAM = False
     WORKERS = 8  # Number of subthreads to use. This is the recommended amount - see for yourself what works best!
-    BAN_STICKER = 'CAADAgADOwADPPEcAXkko5EB3YGYAg'  # banhammer marie sticker
+    BAN_STICKER = 'CAADAQADCAADeuD5KZxa-Wzm9HeqAg'  # banhammer marie sticker
     STRICT_GBAN = False
     STRICT_GMUTE = False
     ALLOW_EXCL = True  # Allow ! commands as well as /
