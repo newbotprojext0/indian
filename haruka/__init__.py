@@ -101,7 +101,7 @@ else:
 
 
 SUDO_USERS.add(OWNER_ID)
-SUDO_
+
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 
