@@ -26,13 +26,14 @@ try:
 except ValueError:
     raise Exception("Your OWNER_ID variable is not a valid integer.")
 
-try:
-    MESSAGE_DUMP = Config.MESSAGE_DUMP
-except ValueError:
-    raise Exception("Your MESSAGE_DUMP must be set.")
 
-#MESSAGE_DUMP = Config.MESSAGE_DUMP
-OWNER_USERNAME = Config.OWNER_USERNAME
+MESSAGE_DUMP = os.environ.get('MESSAGE_DUMP', None)
+OWNER_USERNAME = os.environ.get("OWNER_USERNAME", None) 
+
+
+
+
+
 
 try:
     SUDO_USERS = set(int(x) for x in Config.SUDO_USERS or [])
