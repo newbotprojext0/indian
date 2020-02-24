@@ -648,7 +648,7 @@ GKICK_HANDLER = CommandHandler("gkick", gkick, pass_args=True,
 
 dispatcher.add_handler(ANTISPAM_STATUS)
 
-dispatcher.add_handler(GBAN_HANDLER)
+#dispatcher.add_handler(GBAN_HANDLER)
 dispatcher.add_handler(UNGBAN_HANDLER)
 dispatcher.add_handler(GBAN_LIST)
 
