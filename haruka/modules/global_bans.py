@@ -335,13 +335,13 @@ Note: You can appeal gbans or ask gbans at @OnePunchSupport
 __mod_name__ = "Global Bans"
 
 GBAN_HANDLER = CommandHandler("gban", gban, pass_args=True,
-                              filters=CustomFilters.sudo_filter | CustomFilters.support_filter | CustomFilters.dev_filter)
+                              filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
 UNGBAN_HANDLER = CommandHandler("ungban", ungban, pass_args=True,
-                                filters=CustomFilters.sudo_filter | CustomFilters.support_filter | CustomFilters.dev_filter)
+                                filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
 GBAN_LIST = CommandHandler("gbanlist", gbanlist,
-                           filters=CustomFilters.sudo_filter | CustomFilters.support_filter | CustomFilters.dev_filter)
+                           filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
 GBAN_CLEANUP = CommandHandler("gbancleanup", gbancleanup,
-                           filters=CustomFilters.sudo_filter | CustomFilters.support_filter | CustomFilters.dev_filter)
+                           filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
 
 GBAN_STATUS = CommandHandler("gbanstat", gbanstat, pass_args=True, filters=Filters.group)
 
