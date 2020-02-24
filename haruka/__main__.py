@@ -140,14 +140,13 @@ Click Help button to find out more about how to use me to my full potential.\n\n
 
 
     
-    text += "Want to add me to your group? [Click here!](t.me/Kanna_Chan_Bot?startgroup=true)!\n\
-    Maintained by [this awesome person](https://t.me/Okay_retard).\n\n"
+    text += "Maintained by [this awesome person](https://t.me/Okay_retard).\n\n"
+    
 
     keyboard = [[InlineKeyboardButton(text="📢 Support Group", url="https://t.me/LucySupportChat")]]
-    keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
-        InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
-
+    keyboard += [[InlineKeyboardButton(text="✨Add Me✨", url="t.me/Kanna_Chan_Bot?startgroup=true")]]
+    keyboard += [[InlineKeyboardButton(text="❔ Help", callback_data="help_back"), 
+        
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
 
