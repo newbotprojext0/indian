@@ -170,10 +170,8 @@ def ungban(bot: Bot, update: Update, args: List[str]):
     messagerep = "{} has ungbanned user {}".format(mention_html(banner.id, banner.first_name),
                                                    mention_html(user_chat.id, user_chat.first_name))
 
-    if GBAN_LOGS:
-        bot.send_message(GBAN_LOGS, messagerep, parse_mode=ParseMode.HTML)
-    else:
-        send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
+    
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
                  messagerep,
                  html=True)
 
@@ -195,19 +193,15 @@ def ungban(bot: Bot, update: Update, args: List[str]):
                 pass
             else:
                 message.reply_text("Could not un-gban due to: {}".format(excp.message))
-                if GBAN_LOGS:
-                    bot.send_message(GBAN_LOGS, "Could not un-gban due to: {}".format(excp.message), parse_mode=ParseMode.HTML)
-                else:
-                    bot.send_message(OWNER_ID, "Could not un-gban due to: {}".format(excp.message))
+                
+                bot.send_message(OWNER_ID, "Could not un-gban due to: {}".format(excp.message))
                 return
         except TelegramError:
             pass
 
     sql.ungban_user(user_id)
-    if GBAN_LOGS:
-        bot.send_message(GBAN_LOGS, "un-gban complete!", parse_mode=ParseMode.HTML)
-    else:
-        send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "un-gban complete!")
+    
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "un-gban complete!")
 
     message.reply_text("Person has been un-gbanned.")
 
@@ -247,7 +241,7 @@ def check_and_ban(update, user_id, should_message=True):
     if sql.is_user_gbanned(user_id):
         update.effective_chat.kick_member(user_id)
         if should_message:
-            update.effective_message.reply_text("This person is gbanned and im punching them out of here.\nYou can appeal your gban at @OnePunchSupport")
+            update.effective_message.reply_text("This person is gbanned and im punching them out of here. for")
 
 
 @run_async
