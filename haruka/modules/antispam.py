@@ -137,10 +137,10 @@ def gban(bot: Bot, update: Update, args: List[str]):
         except TelegramError:
             pass
 
-    if GBAN_LOGS:
-        bot.send_message(GBAN_LOGS, "gban complete! (User banned in {} chats)".format(gbanned_chats), parse_mode=ParseMode.HTML)
-    else:
-        send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "gban complete! (User banned in {} chats)".format(gbanned_chats))
+   
+
+
+    send_to_list(bot, SUDO_USERS + SUPPORT_USERS, "gban complete! (User banned in {} chats)".format(gbanned_chats))
     message.reply_text("Done! This gban affected {} chats".format(gbanned_chats))
     try:
         bot.send_message(user_id, "You have been globally banned from all groups where I have administrative permissions.", parse_mode=ParseMode.HTML)
