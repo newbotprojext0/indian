@@ -124,7 +124,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         try:
             update.effective_message.reply_text("Hey ! How are you?")
         except:
-            print("Nut")
+            print("no available")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -135,11 +135,11 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = """Hlw {}, my name is *{}* ! 
+    text = """Hlw, there !, my name is *Sarika* ❂ ! 
 want any Help click - /help
 
 Want to,
-Manager Your Group [Click Here](http://t.me/missmeena_bot?startgroup=true)
+*Manager Your Group* [Click Here](http://t.me/missmeena_bot?startgroup=true)
 
 Handcrafted by *Genius* 🇮🇳"""
 
