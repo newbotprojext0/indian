@@ -122,7 +122,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             send_start(bot, update)
     else:
         try:
-            update.effective_message.reply_text("Yo! whadup?")
+            update.effective_message.reply_text("Hey ! How are you?")
         except:
             print("Nut")
 
@@ -135,7 +135,7 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = "Hey *{}! My name is *{}* \nI'm here to help you manage your groups!\n\
+    text = "Hey there ! My name is *Sarika* I'm here to help you manage your groups!\n\
 Click Help button to find out more about how to use me to my full potential.\n\n"
 
 
