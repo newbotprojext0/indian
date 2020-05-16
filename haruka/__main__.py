@@ -140,7 +140,7 @@ I'm here to help you manage your groups!
 
 Click /Help button to find out more about how to use me to my full potential.
 
-   Join [Nancy MomoLand Support Group](t.me/Nancy_Momoland_support_group) For Chit-Chats And Suggest About Me ❤
+   Join [Nancy MomoLand Support Group](t.me/Nancy_Momoland_support_group) For Chit-Chats And Suggest About Me ❤"""
 
 
     keyboard = [[InlineKeyboardButton(text="➕ Add me to a Group ➕", url="http://t.me/NancYMoMolanD_ProBot?startgroup=true")]]
