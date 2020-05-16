@@ -135,20 +135,17 @@ def send_start(bot, update):
         pass
 
     #chat = update.effective_chat  # type: Optional[Chat] and unused variable
-    text = """Hlw, there !, my name is *Sarika* ❂ ! 
-want any Help click - /help
+    text = """Heyy, there !, my name is *Nancy* !  
+I'm here to help you manage your groups!
 
-Want to,
-*Manager Your Group* [Click Here](http://t.me/missmeena_bot?startgroup=true)
+Click /Help button to find out more about how to use me to my full potential.
 
-Handcrafted by *Genius* 🇮🇳"""
+   Join [Nancy MomoLand Support Group](t.me/Nancy_Momoland_support_group) For Chit-Chats And Suggest About Me ❤
 
 
-   
-
-    keyboard = [[InlineKeyboardButton(text="➕Add me to a Group ➕", url="http://t.me/SarikaRoBot?startgroup=true")]]
-    keyboard += [[InlineKeyboardButton(text="🛠 Control panel", callback_data="cntrl_panel_M")]]
-    keyboard += [[InlineKeyboardButton(text="🇺🇸 Language", callback_data="set_lang_"), 
+    keyboard = [[InlineKeyboardButton(text="➕ Add me to a Group ➕", url="http://t.me/NancYMoMolanD_ProBot?startgroup=true")]]
+    keyboard += [[InlineKeyboardButton(text="🛠 Control panel 🛠", callback_data="cntrl_panel_M")]]
+    keyboard += [[InlineKeyboardButton(text="🇮🇳 Language 🇮🇳", callback_data="set_lang_"), 
         InlineKeyboardButton(text="❔ Help", callback_data="help_back")]]
 
     update.effective_message.reply_text(text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
